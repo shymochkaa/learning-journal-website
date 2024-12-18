@@ -42,12 +42,21 @@ time {
     margin: 0;
 }
 
+
+.bold-font {
+    font-weight: 700;
+}
+
+
+
+
+
+
+
 .container {
     min-width: 320px;
     width: 100%;
 }
-
-
 
 
 .header-container {
@@ -113,7 +122,9 @@ section, main {
     color: #FFFFFF;
     position: relative;
     padding: 5em 1.25em 1.25em 1.25em;
+    margin:  0 0 2.5em 0;
     overflow: hidden; 
+
 }
 
 .hero-container::before {
@@ -131,8 +142,12 @@ section, main {
 }
 
 
+.blog-container {
+    padding: 0;
+}
+
 .blog {
-    margin: 2.5em 1.5em 0 1.5em;
+    margin: 0 1.5em 2.5em  1.5em;
 
 }
 
@@ -206,9 +221,60 @@ footer {
     color: #D7D7D7;
 }
 
+.opened-post {
+    background: none;
+    color: #151515;
+    margin: 2.5em 1.5em 3em 1.5em;
+    position: relative;
+}
 
 
+.opened-post-image-wrapper {
+    position: relative; /* Enables positioning of the overlay */
+    display: inline-block;
+    width: 100%; /* Matches image width */
+    height: 191px; /* Matches the intended height of the image */
+    overflow: hidden; /* Ensures overlay stays within bounds */
+    border-radius: 3px; /* Optional: Matches the image's rounded corners */
+    margin: 1.25em 0;
+}
 
+.opened-post-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0% 70%;
+    border-radius: 3px;
+   
+    
+}
+
+.opened-post-image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.31); /* Semi-transparent black overlay */
+    z-index: 1; /* Places the overlay above the image */
+    
+}
+
+
+.recent {
+    margin: 0 0 2em 0;
+    text-align: center;
+}
+
+.roku-avatar {
+    width: 50%;
+    border-radius: 50%;
+}
+
+.about-p {
+    margin: 0 0 2em 0;
+}
 
 @media (min-width: 769px) {
     body {

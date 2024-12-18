@@ -19,3 +19,10 @@ viewMoreBtn.addEventListener('click', () => {
   }
  
 })
+
+
+const heroContainer = document.querySelector('#hero-container')
+
+heroContainer.addEventListener('click', () => {
+    window.location.href = "post-0.html"; 
+})
