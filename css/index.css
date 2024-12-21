@@ -56,6 +56,7 @@ time {
 .container {
     min-width: 320px;
     width: 100%;
+   
 }
 
 
@@ -72,7 +73,7 @@ time {
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.25em;
+    gap: 0.5em;
 }
 
 .logo img {
@@ -112,9 +113,7 @@ time {
     
 }
 
-section, main {
-    width: fit-content;
-}
+
 
 
 
@@ -186,18 +185,10 @@ section, main {
     font-weight: 700;
     cursor: pointer;
     position: relative;
+    text-decoration: underline;
 }
 
 
-.view-more-btn::after {
-    content: '';
-    position: absolute;
-    bottom: 2px; /* Position the underline */
-    left: 8px; /* Align with text padding */
-    right: 8px;
-    height: 1px; /* Underline thickness */
-    background-color: #000000; /* Underline color */
-}
 
 footer {
     width: 100%;
@@ -222,19 +213,21 @@ footer {
 }
 
 .opened-post {
+    display: flex;
+    flex-direction: column;
     background: none;
     color: #151515;
     margin: 2.5em 1.5em 3em 1.5em;
     position: relative;
+
 }
 
 
 .opened-post-image-wrapper {
     position: relative; /* Enables positioning of the overlay */
-    display: inline-block;
     width: 100%; /* Matches image width */
     height: 191px; /* Matches the intended height of the image */
-    overflow: hidden; /* Ensures overlay stays within bounds */
+    
     border-radius: 3px; /* Optional: Matches the image's rounded corners */
     margin: 1.25em 0;
 }
@@ -245,6 +238,7 @@ footer {
     object-fit: cover;
     object-position: 0% 70%;
     border-radius: 3px;
+    transform: scaleX(-1);
    
     
 }
@@ -268,7 +262,8 @@ footer {
 }
 
 .roku-avatar {
-    width: 50%;
+    width: 182px;
+    height: 182px;
     border-radius: 50%;
 }
 
@@ -276,8 +271,112 @@ footer {
     margin: 0 0 2em 0;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 767px) {
     body {
-        background-color: red;
+        /* background-color: red; */
     }
+
+
+    .hero-container {
+        padding: 17em 3.125em 3.125em 3.75em;
+        
+    }
+
+    .hero-container::before {
+        
+        background-position: 0 68%;
+        
+    }
+
+    .blog-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.75em;
+        margin: 0 4em 3em  4em;
+        
+    }
+    .blog {
+        margin: 0;
+
+    }
+    .view-more-btn {
+        grid-column: span 3;
+        margin: 0 0 2em 0;
+    }
+
+
+    .opened-post-p{
+        padding-right: 5.139420448332422em ;
+        padding-left: 5.139420448332422em;
+        font-size: 1.143125em;
+    }
+
+
+    .bold-font-big {
+        font-size: 1.5rem;
+        padding-left: 3.9166666666666665em;
+    }
+
+    .opened-post h1 {
+        
+        padding-right: 2.9375em ;
+        padding-left: 2.9375em;
+    }
+    .opened-post-image-wrapper {
+        height: 488px; 
+        padding: 0 2.5em;
+    }
+    
+    .opened-post-image-wrapper::before {
+        top: 50%; /* Start at the vertical center */
+        left: 50%; /* Start at the horizontal center */
+        transform: translate(-50%, -50%); /* Center the element */
+        width: calc(100% - 5em);
+  
+    } 
+
+   .about-me {
+        display: flex;
+        gap: 0;
+        margin: 0 0 2.75em 0;
+        align-items: center;
+   }
+
+   .about-me img {
+        margin:  0 2.5em;
+   }
+
+
+   
+
+   .about-me h1 {
+    padding: 0 1.9375em 0 0;
+   }
+
+   .about-me p {
+    padding: 0;
+
+    }
+
+    .bold-font-middle {
+        font-size: 1.25rem;
+        padding-left: 4.7em;
+       
+    }
+    .about-me-p {
+        padding-left: 5.875em;
+        padding-right: 5.875em;
+    }
+
+
+    .recent {
+        margin: 0 0 1.3em 0;
+        font-size: 1.5rem;
+    }
+
+    
+
+
+  
+    
 }
