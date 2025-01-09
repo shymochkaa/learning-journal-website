@@ -11,6 +11,7 @@ body {
   font-size: 16px;
 }
 
+
 .hidden {
   display: none;
 }
@@ -60,7 +61,7 @@ time {
 }
 
 .logo img {
-  width: 34.25px;
+  width: 23.16px;
 }
 
 .logo-link {
@@ -93,6 +94,7 @@ time {
   padding: 5em 1.25em 1.25em 1.25em;
   margin: 0 0 2.5em 0;
   overflow: hidden;
+  z-index: 1;
 }
 
 .hero-container::before {
@@ -115,8 +117,13 @@ time {
 }
 
 .blog {
-  margin: 0 1.5em 2.5em 1.5em;
+  margin: 0 1.5em 1.875em 1.5em;
 }
+
+.blog > :not(.hidden):not(:last-of-type) {
+    margin-bottom: 2.5em;
+}
+
 
 .blog img {
   width: 100%;
@@ -143,7 +150,7 @@ time {
 
 .view-more-btn {
   display: block;
-  margin: 2em auto;
+  margin: 1em auto 2.8125em auto;
   background: none;
   border: none;
   font-size: 1rem;
@@ -179,9 +186,15 @@ footer {
   flex-direction: column;
   background: none;
   color: #151515;
-  margin: 2.5em 1.5em 3em 1.5em;
+  margin: 2.5em 1.5em 1.9em 1.5em;
   position: relative;
 }
+
+
+.recent-blogs > .blog:last-child {
+    margin-bottom: 3.5em;
+}
+
 
 .opened-post-image-wrapper {
   position: relative;
@@ -226,39 +239,65 @@ footer {
   margin: 0 0 2em 0;
 }
 
+.about-me-container p.bold-font {
+    margin: 0.3em 0;
+}
+
+
+
 @media (min-width: 767px) {
+  main {
+    background: #FAFAFA;
+    margin: 0;
+    padding: 0.1em 0;
+  }
 
-    main {
-        /* background-color: #FAFAFA; */
-        margin: 0;
-        padding: 0;
-    }
-    .logo span {
-        font-size: 1.25em;
-    }
+  .logo span {
+    font-size: 1.25rem;
+  }
 
+  .logo img {
+    width: 34.25px;
+  }
+
+  .page-nav {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .header-container {
+    padding: 0  3.3125em;
+  }
 
   .hero-container {
-    padding: 17em 3.125em 3.125em 3.75em;
+    padding: 17em 3.125em 3.125em  3.3125em;
   }
 
-  .hero-container::before {
-    background-position: 0 68%;
-  }
+  
+
 
   .blog-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.75em;
-    margin: 0 4em 3em 4em;
+    row-gap: 2.5em;
+    column-gap: 1.75em;
+    margin: 0  3.3125em 0em  3.3125em;
   }
   .blog {
     margin: 0;
   }
+
   .view-more-btn {
     grid-column: span 3;
     margin: 0 0 2em 0;
+    font-size: 0.875em;
   }
+  .recent-blogs > .blog:last-child {
+    margin-bottom: 2.8em;
+}
+  .blog > :not(.hidden):not(:last-of-type) {
+    margin-bottom: 0;
+}
   .opened-post {
     margin: 2.5em 7.375em 3em 7.375em;
   }
@@ -286,7 +325,7 @@ footer {
 
   .about-me-container {
     margin: 5.625em 7.375em 3em 7.375em;
-}
+  }
 
   .about-me {
     display: flex;
@@ -295,13 +334,11 @@ footer {
     width: calc(100% + (4em * 2));
     margin-left: -4em;
     margin-bottom: 4.375em;
-
   }
 
   .about-me img {
     margin: 0 2.5em 0 0;
   }
-
 
   .about-me p {
     padding: 0;
@@ -310,7 +347,6 @@ footer {
   .bold-font-middle {
     font-size: 1.25rem;
   }
-  
 
   .recent {
     margin: 0 0 1.3em 0;
